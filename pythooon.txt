@@ -1,0 +1,45 @@
+	PTHYTON :
+       ============
+1) constants ,
+2)reserved words : ex : nonoe ,is,if ,..
+3)variables : dont tend to use variables with under scores in pyhton .
+              don't us e :=====>>> (.)
+              and note that it is not a good practice to use uppercases for differentiating variables;
+4)Mnemonic variable Names : means that we can use any name of the variable that does make sense with what you are doing and it can help reader to know what you are doing  .
+
+	Expressions:
+        =============
+a)numeric expression : operator = + , -, * , / , **(power) , % (modulus)
+b)order of evaluation :  paranthesis   -> power -> multiplication ->addition -> the re pf the calculation 
+
+
+SOMe commands : 
+-----------------
+           1) type(variableName or a string )
+       ==>returns the type of variable = > ex : <class 'str'>meaning the variable is a string ;
+           2)CASTING : changing from one data type to the other . ex :>>> i = 1
+                                                                      >>>print(float(i)) // output 1.0  ,here we have changed integer to float .
+			casting from string to interger ex: >>> x ='123'
+							    >>> x= int(x)
+			Ss				    >>> print (x) // 123
+ 			BUT this does not work  ==> x= 'innocent'
+						>>> print(int(x));//value EROOR
+          3)INPUT : take the users inputs : name = input ('A word to prompt the user "0;
+	  4)COMMENT : # wwwwwwffwefwfq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+composer require intervention/image : Intervention Image is a powerful image handling and manipulation library for PHP. It provides a simple and expressive syntax to perform various image operations such as resizing, cropping, watermarking, and more.
+    
+   !! router >  app.php && wen.php
+           --------------------------
+app.php :  is the one which handles the rquest with the APIs .
+web.php : handles the webpages request  
+  
+   !! config ? app.php : The app.php file in the config folder of a Laravel application is a configuration file that contains various settings and options for the application. It is a fundamental configuration file that helps define the behavior and settings of the Laravel framework.
+          ------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
