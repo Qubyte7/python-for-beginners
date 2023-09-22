@@ -117,7 +117,7 @@ for (k,v) in dict.items():
 print(temporaryList)
 temporaryList2 = sorted(temporaryList, reverse=True)
 print(temporaryList2)
-'''
+
 
 #regular expressions
 import re
@@ -127,6 +127,7 @@ for line in read:
     line=line.strip()
     if re.search('^w.\S+',line):#not that re.search returns true for the values that muches the exprection
         print(line)
+        
 
 x= "My GOD: What on earth : is this thIngs "
 e="From mugiha@gmail.com huye disctrict"
@@ -144,3 +145,37 @@ print(ng)
 email = re.findall('^From \S+',e)
 email = re.findall('^From (\S+)',e)
 print(email)
+
+atpos = x.find('') # find prints back the index of the specified character
+print(atpos)
+
+# ATTENTION : 1) [^ ]: means a set charcters without a blank spce
+# when you want to search for $ you use :\$
+
+
+
+#sockets
+import socket
+mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+try:
+    mysocket.connect(('data.pr4s.org',80))
+    cmd='GET http://data.pr4s.org/romeo.txt HTTP/1.0\n\n'.encode()
+    mysocket.send(cmd)
+    print("connection established")
+except socket.error:
+    print("connection error")
+
+while True:
+    data = mysocket.recv(512)
+    if(len(data)<1):
+        break;
+    print(data.decode())
+mysocket.close();
+#socket.AF_INET : means that we are going to make a socket that is going to goes across the internet
+#socket.SOCK_STREAM : means that we made a stream socket which is a series of characters that comes one after another
+'''
+
+#Printing ASCII CODE OF A CHARACTER
+print(ord("a"))
+
+
