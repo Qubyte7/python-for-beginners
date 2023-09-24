@@ -175,8 +175,9 @@ mysocket.close();
 #socket.AF_INET : means that we are going to make a socket that is going to goes across the internet
 #socket.SOCK_STREAM : means that we made a stream socket which is a series of characters that comes one after another
 
-'''
+
 #read web pages using urllib
+#using beatiful soup  :  is used for parsing HTML documents and extracting data from HTML documents
 import urllib.parse,urllib.request,urllib.error
 from bs4 import BeautifulSoup
 try:
@@ -188,10 +189,37 @@ try:
         print(tag.get('href',None))
 except urllib.error:
     print("Sorry error ocuured while fetching hypertext")
+'''
+
+#XML
 
 
 
+#json
+import json
+input2 = ''' [
+    {
+    "id": "001",
+    "x": "1",
+    "name": "Shami"
+    },
+    {
+    "id": "004",
+    "x": "4",
+    "name": "Michael"
+    }
+   ]'''
 
 
+# info = json.loads(input2)
+try:
+    info = json.loads(input2)
+except json.JSONDecodeError as e:
+    print(f"JSON decoding error: {e}")
 
+print('user count : ', len(info))
+for item in info:
+    print('Name : ', item['name'])
+    print('ID :',item['id'])
+    print('Attribute : ', item['x'])
 
