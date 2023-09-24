@@ -152,7 +152,8 @@ print(atpos)
 # ATTENTION : 1) [^ ]: means a set charcters without a blank spce
 # when you want to search for $ you use :\$
 
-
+#Printing ASCII CODE OF A CHARACTER
+print(ord("a"))
 
 #sockets
 import socket
@@ -173,9 +174,24 @@ while True:
 mysocket.close();
 #socket.AF_INET : means that we are going to make a socket that is going to goes across the internet
 #socket.SOCK_STREAM : means that we made a stream socket which is a series of characters that comes one after another
-'''
 
-#Printing ASCII CODE OF A CHARACTER
-print(ord("a"))
+'''
+#read web pages using urllib
+import urllib.parse,urllib.request,urllib.error
+from bs4 import BeautifulSoup
+try:
+    url = input("enter url : ") 
+    html =urllib.request.urlopen(url).read()
+    soup = BeautifulSoup(html,'html.parser')
+    tags =soup('a')
+    for tag in tags:
+        print(tag.get('href',None))
+except urllib.error:
+    print("Sorry error ocuured while fetching hypertext")
+
+
+
+
+
 
 
