@@ -189,7 +189,7 @@ try:
         print(tag.get('href',None))
 except urllib.error:
     print("Sorry error ocuured while fetching hypertext")
-'''
+
 
 #XML
 
@@ -197,20 +197,7 @@ except urllib.error:
 
 #json
 import json
-input2 = ''' [
-    {
-    "id": "001",
-    "x": "1",
-    "name": "Shami"
-    },
-    {
-    "id": "004",
-    "x": "4",
-    "name": "Michael"
-    }
-   ]'''
-
-
+input2 = ' [ { "id": "00", "x": "1", "name": "Shami" }, { "id": "004", "x": "4", "name": "Michael" }]'
 # info = json.loads(input2)
 try:
     info = json.loads(input2)
@@ -222,4 +209,45 @@ for item in info:
     print('Name : ', item['name'])
     print('ID :',item['id'])
     print('Attribute : ', item['x'])
+
+'''
+
+import urllib.request,urllib.parse,urllib.error
+import json
+serviveUrl = 'http://googleapis.com/maps/api/geocode/json?'
+while True:
+    addressLocation = input('Enter your location : ')
+    if len(addressLocation) < 1 :break
+    url = serviveUrl + urllib.parse.urlencode({'address':addressLocation})
+
+    print('Retriving ',url);
+    uh = urllib.request.urlopen(url)
+    data = uh.read().decode()
+    print('data successfully retrieved : ' , len(data) , 'characters')
+
+
+    try:
+        js =json.loads(data)
+    except:
+        js =None
+    
+    if not js or 'status' not in js or js['status'] != 'OK':
+        print("====failure during the retrival==========")
+        print(data)
+        continue
+ 
+   #the googleapis for map returns a json format anf we are retriveing the data basing on that JSON format 
+    lat=js["results"][0]["geometry"]["location"]["lat"]
+    long = js["results"][0]["geometry"]["location"]["lng"]
+
+    print('latitude is ' , lat , "longitude is " , long)
+    location = js["results"][0]['formatted_address']
+    print(location)
+
+
+
+
+
+
+
 
