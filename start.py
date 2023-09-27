@@ -210,7 +210,7 @@ for item in info:
     print('ID :',item['id'])
     print('Attribute : ', item['x'])
 
-'''
+
 
 import urllib.request,urllib.parse,urllib.error
 import json
@@ -245,6 +245,48 @@ while True:
     print(location)
 
 
+
+#classes in python
+class Person:
+    def __init__(self, name, age, location):
+        self.name = name
+        self.age = age
+        self.location = location
+
+    def introduce(self):
+        print(f"Hello, my name is {self.name}. I am {self.age} years old, and I live in {self.location}.")
+
+# Create instances of the Person class with specific values
+person1 = Person("Alice", 25, "New York")
+person2 = Person("Bob", 30, "Los Angeles")
+
+# Access and use the instance variables
+print(person1.name)      # Outputs: Alice
+print(person2.location)  # Outputs: Los Angeles
+
+# Call the introduce method
+person1.introduce()  # Outputs: Hello, my name is Alice. I am 25 years old, and I live in New York.
+person2.introduce()  # Outputs: Hello, my name is Bob. I am 30 years old, and I live in Los Angeles.
+'''
+
+class Cow:
+    def __init__(self,color,sound,legs,tail):
+        self.color=color
+        self.sound=sound
+        self.legs=legs
+        self.tail=tail
+
+    def behaviors(self):
+        print(f"your cow has {self.color} color , it sounds like {self.sound} and has {self.legs} legs and  {self.tail}  tail")
+    
+print(" enter the credentials for the cow so that we can get the medication for your  \'cow\' ")
+cow1 = Cow(
+input(" enter the color of your cow :"),
+input(" Enter how your cow sounds  :"),
+input("ENter the how many legs your cow has :"),
+input("DOES YOUR COW HAVE TAIL :")
+)
+cow1.behaviors()
 
 
 
