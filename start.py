@@ -267,9 +267,8 @@ print(person2.location)  # Outputs: Los Angeles
 # Call the introduce method
 person1.introduce()  # Outputs: Hello, my name is Alice. I am 25 years old, and I live in New York.
 person2.introduce()  # Outputs: Hello, my name is Bob. I am 30 years old, and I live in Los Angeles.
-'''
 
-class Cow:
+class Goat:
     def __init__(self,color,sound,legs,tail):
         self.color=color
         self.sound=sound
@@ -277,18 +276,23 @@ class Cow:
         self.tail=tail
 
     def behaviors(self):
-        print(f"your cow has {self.color} color , it sounds like {self.sound} and has {self.legs} legs and  {self.tail}  tail")
+        print(f"your goat has {self.color} color , it sounds like {self.sound} and has {self.legs} legs and  {self.tail}  tail")
     
-print(" enter the credentials for the cow so that we can get the medication for your  \'cow\' ")
-cow1 = Cow(
-input(" enter the color of your cow :"),
-input(" Enter how your cow sounds  :"),
-input("ENter the how many legs your cow has :"),
-input("DOES YOUR COW HAVE TAIL :")
+print(" enter the credentials for the goat so that we can get the medication for your  \'goat\' ")
+Goat1 = Goat(
+input(" enter the color of your goat :"),
+input(" Enter how your goat sounds  :"),
+input("ENter the how many legs your goat has :"),
+input("DOES YOUR goat HAVE TAIL :")
 )
-cow1.behaviors()
+Goat1.behaviors()
 
+#now that __init__ represrents the constructor of the class and __del__ represents destruct of the class 
 
+#inheritance
+class Cow(Goat):#this is how we extend the class 
+    type=""
+'''
 
 
 
