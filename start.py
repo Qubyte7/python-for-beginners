@@ -75,6 +75,7 @@ dictionary1['fire']='assualt rifle'
 dictionary1['boomb']='hand grenade'
 
 print(dictionary1)
+
 dictionary2 =dict()
 names= ['innocent','ganza','Michael','sabrina','innocent']
 
@@ -90,7 +91,7 @@ print(x)
 print(list(dictionary2))#prints the keys
 print(dictionary2.keys())#prints the keys
 print(dictionary2.values())#prints the values 
-
+print(dictionary2)
 
 #tuples : they similar to list but the slite difference is that they are not modifiriable 
 # to mean they are immutable & function that may seem to be changing the tuple can not be applied
